@@ -1,0 +1,147 @@
+{
+  "districts": [
+    { "id": 1, "name": "Wayanad", "villages": 25 },
+    { "id": 2, "name": "Idukki", "villages": 18 },
+    { "id": 3, "name": "Palakkad", "villages": 32 },
+    { "id": 4, "name": "Thrissur", "villages": 22 }
+  ],
+  "villages": [
+    {
+      "id": 1,
+      "name": "Meppadi",
+      "district": "Wayanad",
+      "population": 1200,
+      "coordinates": [11.5811, 76.1437],
+      "claims": {
+        "total": 45,
+        "approved": 23,
+        "pending": 15,
+        "rejected": 7
+      },
+      "fraStatus": "approved",
+      "biodiversity": "high",
+      "deforestationRisk": "low"
+    },
+    {
+      "id": 2,
+      "name": "Sulthan Bathery",
+      "district": "Wayanad",
+      "population": 2800,
+      "coordinates": [11.6854, 76.2744],
+      "claims": {
+        "total": 78,
+        "approved": 45,
+        "pending": 25,
+        "rejected": 8
+      },
+      "fraStatus": "pending",
+      "biodiversity": "high",
+      "deforestationRisk": "medium"
+    },
+    {
+      "id": 3,
+      "name": "Munnar",
+      "district": "Idukki",
+      "population": 1850,
+      "coordinates": [10.0889, 77.0595],
+      "claims": {
+        "total": 62,
+        "approved": 38,
+        "pending": 18,
+        "rejected": 6
+      },
+      "fraStatus": "approved",
+      "biodiversity": "very_high",
+      "deforestationRisk": "low"
+    },
+    {
+      "id": 4,
+      "name": "Thekkady",
+      "district": "Idukki",
+      "population": 950,
+      "coordinates": [9.5916, 77.1603],
+      "claims": {
+        "total": 34,
+        "approved": 20,
+        "pending": 10,
+        "rejected": 4
+      },
+      "fraStatus": "pending",
+      "biodiversity": "high",
+      "deforestationRisk": "low"
+    },
+    {
+      "id": 5,
+      "name": "Attappady",
+      "district": "Palakkad",
+      "population": 3200,
+      "coordinates": [11.3410, 76.8259],
+      "claims": {
+        "total": 95,
+        "approved": 52,
+        "pending": 30,
+        "rejected": 13
+      },
+      "fraStatus": "rejected",
+      "biodiversity": "medium",
+      "deforestationRisk": "high"
+    }
+  ],
+  "mapLayers": {
+    "forestCover": {
+      "name": "Forest Cover",
+      "visible": true,
+      "color": "#228B22",
+      "data": [
+        {
+          "type": "polygon",
+          "coordinates": [[11.5, 76.1], [11.6, 76.1], [11.6, 76.2], [11.5, 76.2]],
+          "density": 85
+        }
+      ]
+    },
+    "waterBodies": {
+      "name": "Rivers & Water Bodies",
+      "visible": true,
+      "color": "#4169E1",
+      "data": [
+        {
+          "type": "line",
+          "coordinates": [[11.5811, 76.1437], [11.6854, 76.2744]],
+          "name": "Kabini River"
+        }
+      ]
+    },
+    "farmLands": {
+      "name": "Farm Lands",
+      "visible": false,
+      "color": "#DAA520",
+      "data": [
+        {
+          "type": "polygon",
+          "coordinates": [[11.5, 76.15], [11.55, 76.15], [11.55, 76.18], [11.5, 76.18]],
+          "cropType": "paddy"
+        }
+      ]
+    },
+    "fraClaims": {
+      "name": "FRA Claim Status",
+      "visible": true,
+      "colors": {
+        "approved": "#22C55E",
+        "pending": "#EAB308",
+        "rejected": "#EF4444"
+      }
+    },
+    "biodiversity": {
+      "name": "Biodiversity Zones",
+      "visible": false,
+      "colors": {
+        "very_high": "#059669",
+        "high": "#10B981",
+        "medium": "#34D399",
+        "low": "#6EE7B7"
+      }
+    }
+  }
+}

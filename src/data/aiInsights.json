@@ -1,0 +1,106 @@
+{
+  "predictions": [
+    {
+      "id": 1,
+      "type": "Claim Approval Probability",
+      "village": "Meppadi",
+      "probability": 78,
+      "factors": [
+        "Strong documentation",
+        "Clear land boundaries",
+        "Community support"
+      ],
+      "confidence": "High"
+    },
+    {
+      "id": 2,
+      "type": "Processing Time Estimate",
+      "village": "Sulthan Bathery",
+      "estimatedMonths": 6.5,
+      "factors": [
+        "Historical processing patterns",
+        "Current workload",
+        "Document completeness"
+      ],
+      "confidence": "Medium"
+    }
+  ],
+  "anomalyAlerts": [
+    {
+      "id": 1,
+      "type": "Documentation Gap",
+      "village": "Attappady",
+      "severity": "High",
+      "description": "Multiple claims missing survey numbers",
+      "recommendation": "Coordinate with village revenue officer for boundary verification",
+      "timestamp": "2024-01-15T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "type": "Processing Delay",
+      "village": "Thekkady",
+      "severity": "Medium",
+      "description": "Claims pending beyond average processing time",
+      "recommendation": "Follow up with forest department for status update",
+      "timestamp": "2024-01-14T15:45:00Z"
+    },
+    {
+      "id": 3,
+      "type": "Boundary Conflict",
+      "village": "Munnar",
+      "severity": "Low",
+      "description": "Overlapping claim boundaries detected",
+      "recommendation": "Schedule joint survey with affected claimants",
+      "timestamp": "2024-01-13T09:20:00Z"
+    }
+  ],
+  "riskAssessment": {
+    "deforestationRisk": [
+      {
+        "village": "Attappady",
+        "riskLevel": "High",
+        "score": 7.8,
+        "factors": ["Proximity to mining area", "Recent land clearing activity"],
+        "recommendations": ["Increase monitoring", "Community awareness programs"]
+      },
+      {
+        "village": "Sulthan Bathery",
+        "riskLevel": "Medium",
+        "score": 5.2,
+        "factors": ["Agricultural expansion", "Tourism pressure"],
+        "recommendations": ["Sustainable tourism guidelines", "Buffer zone establishment"]
+      }
+    ],
+    "biodiversityImpact": [
+      {
+        "village": "Munnar",
+        "impactLevel": "Positive",
+        "score": 8.5,
+        "description": "Community forest management showing improved wildlife sightings"
+      },
+      {
+        "village": "Thekkady",
+        "impactLevel": "Neutral",
+        "score": 6.0,
+        "description": "Stable ecosystem indicators with managed human activity"
+      }
+    ]
+  },
+  "mlModels": {
+    "approvalPredictor": {
+      "accuracy": 87.3,
+      "lastUpdated": "2024-01-10",
+      "trainingData": "2019-2023 historical claims"
+    },
+    "timeEstimator": {
+      "accuracy": 82.1,
+      "lastUpdated": "2024-01-08",
+      "trainingData": "Processing times from 500+ completed claims"
+    },
+    "riskAnalyzer": {
+      "accuracy": 79.6,
+      "lastUpdated": "2024-01-12",
+      "trainingData": "Satellite imagery + ground truth data"
+    }
+  }
+}

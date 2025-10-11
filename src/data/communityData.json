@@ -1,0 +1,157 @@
+{
+  "sentimentAnalysis": {
+    "overall": {
+      "positive": 45,
+      "neutral": 35,
+      "negative": 20
+    },
+    "byDistrict": [
+      {
+        "district": "Wayanad",
+        "positive": 52,
+        "neutral": 28,
+        "negative": 20
+      },
+      {
+        "district": "Idukki",
+        "positive": 48,
+        "neutral": 31,
+        "negative": 21
+      },
+      {
+        "district": "Palakkad",
+        "positive": 35,
+        "neutral": 45,
+        "negative": 20
+      }
+    ]
+  },
+  "voiceNotes": [
+    {
+      "id": 1,
+      "village": "Meppadi",
+      "speaker": "Tribal Leader",
+      "duration": "2:34",
+      "sentiment": "positive",
+      "transcript": "The forest rights process has been very helpful for our community. We now have legal recognition of our traditional lands.",
+      "keywords": ["forest rights", "community", "legal recognition", "traditional lands"],
+      "timestamp": "2024-01-15T14:20:00Z",
+      "language": "Malayalam"
+    },
+    {
+      "id": 2,
+      "village": "Sulthan Bathery",
+      "speaker": "Community Member",
+      "duration": "1:45",
+      "sentiment": "neutral",
+      "transcript": "The documentation process is complex. We need more guidance on filling out the forms correctly.",
+      "keywords": ["documentation", "guidance", "forms", "complex"],
+      "timestamp": "2024-01-14T11:15:00Z",
+      "language": "Malayalam"
+    },
+    {
+      "id": 3,
+      "village": "Attappady",
+      "speaker": "Village Representative",
+      "duration": "3:12",
+      "sentiment": "negative",
+      "transcript": "Our claims have been pending for too long. The delay is causing hardship for families who depend on forest resources.",
+      "keywords": ["pending", "delay", "hardship", "forest resources"],
+      "timestamp": "2024-01-13T16:30:00Z",
+      "language": "Malayalam"
+    },
+    {
+      "id": 4,
+      "village": "Munnar",
+      "speaker": "Elderly Community Member",
+      "duration": "2:58",
+      "sentiment": "positive",
+      "transcript": "Our ancestors have lived in harmony with the forest for generations. The FRA recognizes our traditional knowledge and practices.",
+      "keywords": ["ancestors", "harmony", "generations", "traditional knowledge"],
+      "timestamp": "2024-01-12T09:45:00Z",
+      "language": "Malayalam"
+    },
+    {
+      "id": 5,
+      "village": "Thekkady",
+      "speaker": "Youth Representative",
+      "duration": "1:28",
+      "sentiment": "positive",
+      "transcript": "The digital platform makes it easier for young people to participate in the FRA process and support our elders.",
+      "keywords": ["digital platform", "young people", "participate", "support elders"],
+      "timestamp": "2024-01-11T13:20:00Z",
+      "language": "Malayalam"
+    }
+  ],
+  "topicModeling": {
+    "majorThemes": [
+      {
+        "theme": "Documentation Challenges",
+        "frequency": 28,
+        "sentiment": "neutral",
+        "keywords": ["forms", "paperwork", "evidence", "survey"]
+      },
+      {
+        "theme": "Community Empowerment",
+        "frequency": 24,
+        "sentiment": "positive",
+        "keywords": ["recognition", "rights", "community", "empowerment"]
+      },
+      {
+        "theme": "Processing Delays",
+        "frequency": 22,
+        "sentiment": "negative",
+        "keywords": ["waiting", "delay", "pending", "time"]
+      },
+      {
+        "theme": "Traditional Knowledge",
+        "frequency": 19,
+        "sentiment": "positive",
+        "keywords": ["ancestors", "tradition", "knowledge", "culture"]
+      },
+      {
+        "theme": "Environmental Conservation",
+        "frequency": 15,
+        "sentiment": "positive",
+        "keywords": ["forest", "conservation", "wildlife", "sustainable"]
+      }
+    ]
+  },
+  "feedbackTrends": [
+    {
+      "month": "Oct 2023",
+      "positive": 38,
+      "neutral": 42,
+      "negative": 20
+    },
+    {
+      "month": "Nov 2023",
+      "positive": 41,
+      "neutral": 39,
+      "negative": 20
+    },
+    {
+      "month": "Dec 2023",
+      "positive": 43,
+      "neutral": 37,
+      "negative": 20
+    },
+    {
+      "month": "Jan 2024",
+      "positive": 45,
+      "neutral": 35,
+      "negative": 20
+    }
+  ],
+  "communityEngagement": {
+    "totalParticipants": 156,
+    "activeVoices": 89,
+    "averageResponseTime": "2.3 days",
+    "languageDistribution": {
+      "Malayalam": 78,
+      "Tamil": 12,
+      "Kannada": 6,
+      "Hindi": 4
+    }
+  }
+}

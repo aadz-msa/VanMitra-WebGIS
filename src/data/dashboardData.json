@@ -1,0 +1,59 @@
+{
+  "overview": {
+    "totalClaims": 314,
+    "approvedClaims": 178,
+    "pendingClaims": 98,
+    "rejectedClaims": 38,
+    "averageProcessingTime": "8.5 months"
+  },
+  "claimsByYear": [
+    { "year": "2019", "filed": 42, "approved": 28, "rejected": 6 },
+    { "year": "2020", "filed": 58, "approved": 35, "rejected": 8 },
+    { "year": "2021", "filed": 67, "approved": 45, "rejected": 12 },
+    { "year": "2022", "filed": 73, "approved": 38, "rejected": 7 },
+    { "year": "2023", "filed": 74, "approved": 32, "rejected": 5 }
+  ],
+  "claimTypeDistribution": [
+    { "type": "Individual", "count": 189, "percentage": 60.2 },
+    { "type": "Community", "count": 87, "percentage": 27.7 },
+    { "type": "Community Forest Resource", "count": 38, "percentage": 12.1 }
+  ],
+  "districtWiseStats": [
+    {
+      "district": "Wayanad",
+      "totalClaims": 123,
+      "approved": 68,
+      "pending": 40,
+      "rejected": 15,
+      "approvalRate": 55.3
+    },
+    {
+      "district": "Idukki",
+      "totalClaims": 96,
+      "approved": 58,
+      "pending": 28,
+      "rejected": 10,
+      "approvalRate": 60.4
+    },
+    {
+      "district": "Palakkad",
+      "totalClaims": 95,
+      "approved": 52,
+      "pending": 30,
+      "rejected": 13,
+      "approvalRate": 54.7
+    }
+  ],
+  "processingTime": {
+    "fastest": "3.2 months",
+    "slowest": "18.5 months",
+    "average": "8.5 months",
+    "medianTime": "7.8 months"
+  },
+  "trendsAndInsights": [
+    "Approval rates have increased by 12% over the last 3 years",
+    "Community claims show 23% higher approval rate than individual claims",
+    "Processing time has reduced by 2.1 months on average since 2021",
+    "Wayanad district shows highest claim volume but moderate approval rates"
+  ]
+}
