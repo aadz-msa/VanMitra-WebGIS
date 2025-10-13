@@ -32,7 +32,6 @@ const FilterSidebar = ({
 
   return (
     <>
-      {/* Backdrop */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -44,7 +43,6 @@ const FilterSidebar = ({
           />
         )}
       </AnimatePresence>
-
       {/* Sidebar */}
       <motion.div
         className={`fixed left-0 top-16 h-[calc(100vh-4rem)] w-80 bg-white shadow-xl border-r border-forest-200 z-50 overflow-hidden ${
@@ -62,7 +60,6 @@ const FilterSidebar = ({
               <X className="w-5 h-5 text-forest-600" />
             </button>
           </div>
-
           {/* Tabs */}
           <div className="flex space-x-1 bg-forest-50 p-1 rounded-lg">
             {tabs.map((tab) => {
@@ -86,7 +83,7 @@ const FilterSidebar = ({
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-y-auto p-4">
+        <div className="flex-1 overflow-y-auto p-4 min-h-0">
           <AnimatePresence mode="wait">
             {/* Filters Tab */}
             {activeTab === 'filters' && (
@@ -98,113 +95,103 @@ const FilterSidebar = ({
                 transition={{ duration: 0.2 }}
                 className="space-y-4"
               >
-                {/* District Filter */}
-                <div>
-                  <label className="block text-sm font-medium text-forest-800 mb-2">
-                    District
-                  </label>
-                  <div className="relative">
-                    <select
-                      value={filters.district}
-                      onChange={(e) => onFilterChange('district', e.target.value)}
-                      className="w-full p-3 border border-forest-200 rounded-lg bg-white text-forest-800 appearance-none cursor-pointer hover:bg-forest-50 transition-colors"
-                    >
-                      {districts.map((district) => (
-                        <option key={district} value={district}>
-                          {district}
-                        </option>
-                      ))}
-                    </select>
-                    <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-forest-600 pointer-events-none" />
+                  {/* District Filter */}
+                  <div>
+                    <label className="block text-sm font-medium text-forest-800 mb-2">
+                      District
+                    </label>
+                    <div className="relative">
+                      <select
+                        value={filters.district}
+                        onChange={(e) => onFilterChange('district', e.target.value)}
+                        className="w-full p-3 border border-forest-200 rounded-lg bg-white text-forest-800 appearance-none cursor-pointer hover:bg-forest-50 transition-colors"
+                      >
+                        {districts.map((district) => (
+                          <option key={district} value={district}>
+                            {district}
+                          </option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-forest-600 pointer-events-none" />
+                    </div>
                   </div>
-                </div>
 
-                {/* Village Filter */}
-                <div>
-                  <label className="block text-sm font-medium text-forest-800 mb-2">
-                    Village
-                  </label>
-                  <div className="relative">
-                    <select
-                      value={filters.village}
-                      onChange={(e) => onFilterChange('village', e.target.value)}
-                      className="w-full p-3 border border-forest-200 rounded-lg bg-white text-forest-800 appearance-none cursor-pointer hover:bg-forest-50 transition-colors"
-                    >
-                      {villages.map((village) => (
-                        <option key={village} value={village}>
-                          {village}
-                        </option>
-                      ))}
-                    </select>
-                    <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-forest-600 pointer-events-none" />
+                  {/* Village Filter */}
+                  <div>
+                    <label className="block text-sm font-medium text-forest-800 mb-2">
+                      Village
+                    </label>
+                    <div className="relative">
+                      <select
+                        value={filters.village}
+                        onChange={(e) => onFilterChange('village', e.target.value)}
+                        className="w-full p-3 border border-forest-200 rounded-lg bg-white text-forest-800 appearance-none cursor-pointer hover:bg-forest-50 transition-colors"
+                      >
+                        {villages.map((village) => (
+                          <option key={village} value={village}>
+                            {village}
+                          </option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-forest-600 pointer-events-none" />
+                    </div>
                   </div>
-                </div>
 
-                {/* Claim Type Filter */}
-                <div>
-                  <label className="block text-sm font-medium text-forest-800 mb-2">
-                    Claim Type
-                  </label>
-                  <div className="relative">
-                    <select
-                      value={filters.claimType}
-                      onChange={(e) => onFilterChange('claimType', e.target.value)}
-                      className="w-full p-3 border border-forest-200 rounded-lg bg-white text-forest-800 appearance-none cursor-pointer hover:bg-forest-50 transition-colors"
-                    >
-                      {claimTypes.map((type) => (
-                        <option key={type} value={type}>
-                          {type}
-                        </option>
-                      ))}
-                    </select>
-                    <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-forest-600 pointer-events-none" />
+                  {/* Claim Type Filter */}
+                  <div>
+                    <label className="block text-sm font-medium text-forest-800 mb-2">
+                      Claim Type
+                    </label>
+                    <div className="relative">
+                      <select
+                        value={filters.claimType}
+                        onChange={(e) => onFilterChange('claimType', e.target.value)}
+                        className="w-full p-3 border border-forest-200 rounded-lg bg-white text-forest-800 appearance-none cursor-pointer hover:bg-forest-50 transition-colors"
+                      >
+                        {claimTypes.map((type) => (
+                          <option key={type} value={type}>
+                            {type}
+                          </option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-forest-600 pointer-events-none" />
+                    </div>
                   </div>
-                </div>
 
-                {/* Year Filter */}
-                <div>
-                  <label className="block text-sm font-medium text-forest-800 mb-2">
-                    Year
-                  </label>
-                  <div className="relative">
-                    <select
-                      value={filters.year}
-                      onChange={(e) => onFilterChange('year', e.target.value)}
-                      className="w-full p-3 border border-forest-200 rounded-lg bg-white text-forest-800 appearance-none cursor-pointer hover:bg-forest-50 transition-colors"
-                    >
-                      {years.map((year) => (
-                        <option key={year} value={year}>
-                          {year}
-                        </option>
-                      ))}
-                    </select>
-                    <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-forest-600 pointer-events-none" />
+                  {/* Year Filter */}
+                  <div>
+                    <label className="block text-sm font-medium text-forest-800 mb-2">
+                      Year
+                    </label>
+                    <div className="relative">
+                      <select
+                        value={filters.year}
+                        onChange={(e) => onFilterChange('year', e.target.value)}
+                        className="w-full p-3 border border-forest-200 rounded-lg bg-white text-forest-800 appearance-none cursor-pointer hover:bg-forest-50 transition-colors"
+                      >
+                        {years.map((year) => (
+                          <option key={year} value={year}>
+                            {year}
+                          </option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-forest-600 pointer-events-none" />
+                    </div>
                   </div>
-                </div>
 
-                {/* Apply Button */}
-                <motion.button
-                  onClick={onApplyFilters}
-                  className="w-full bg-forest-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-forest-700 transition-colors"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Apply Filters
-                </motion.button>
-
-                {/* Clear Button */}
-                <button
-                  onClick={() => {
-                    onFilterChange('district', 'All')
-                    onFilterChange('village', 'All')
-                    onFilterChange('claimType', 'All')
-                    onFilterChange('year', 'All')
-                  }}
-                  className="w-full border border-forest-300 text-forest-600 py-3 px-4 rounded-lg font-medium hover:bg-forest-50 transition-colors"
-                >
-                  Clear All Filters
-                </button>
-              </motion.div>
+                  {/* Description */}
+                  <div>
+                    <label className="block text-sm font-medium text-forest-800 mb-2">
+                      Description
+                    </label>
+                    <textarea
+                      value={filters.description}
+                      onChange={(e) => onFilterChange('description', e.target.value)}
+                      className="w-full p-3 border border-forest-200 rounded-lg bg-white text-forest-800 resize-none min-h-[60px]"
+                      placeholder="Brief description of your claim..."
+                    />
+                  </div>
+                </motion.div>
             )}
 
             {/* Layers Tab */}

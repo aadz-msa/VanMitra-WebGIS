@@ -25,7 +25,7 @@ const HeaderBar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo and Title */}
           <motion.div 
-            className="flex items-center space-x-3"
+            className="flex items-center space-x-3 pl-0 ml-0"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

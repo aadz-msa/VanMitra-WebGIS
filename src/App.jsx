@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import HeaderBar from './components/HeaderBar'
@@ -6,8 +6,15 @@ import MapPage from './pages/MapPage'
 import InsightsPage from './pages/InsightsPage'
 import CommunityPage from './pages/CommunityPage'
 import ReportsPage from './pages/ReportsPage'
+import LoginPage from './pages/LoginPage'
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  if (!user) {
+    return <LoginPage onLogin={setUser} />;
+  }
+
   return (
     <Router>
       <div className="min-h-screen bg-earth-50">
